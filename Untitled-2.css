@@ -1,54 +1,70 @@
-@charset "utf-8";
-.wrapper{
-	display: flex;
-	flex-flow: row wrap;
-	text-align: center;
-	align-content:center;
-}
-.wrapper>*{
-	padding: 10px;
-	margin: 10px;
-	flex: 1 100%;
-	border-radius: 10px;
-}
-.header{
-	background: #AF2D2F;
-	height: 90px;
-}
-.main{
-	text-align: center;
-	background: #361688;
-	height: 300px; 
-	font-size: 14px;
-}
-.aside1{
-	background: #FFD700;
-}
-.aside2{
-	background: #25C046
-}
-@media all and (max-width:767px){
-	.main{
-		flex: 3;
-	}
-	.aside1{
-		order: 1;
-	}
-	.aside2{
-		order: 2;
-	}
-	.main{
-		order: 2;
-	}
-}
-@media all and (min-width:992px){
-	.main{
-		flex: 3;
-	}
+.container{
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
 }
 
-@media all and (min-width:768px){
-	.aside{
-		flex: 1;
-	}
+*{
+    box-sizing: border-box;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.box{
+    width: 90%;
+    height: 170px;
+    border: 1px solid black;
+    background-color: gray;
+    margin: 15px;
+}
+
+p{
+    margin: 10px;
+    margin-top: 50px;
+}
+
+.item{
+    display: inline;
+    text-align: center;
+    width: 100px;
+    border: 1px solid black;
+    float: right;
+    clear: both;
+    padding: 5px 15px;
+    margin-left: 100%;
+}
+
+#item1{
+    background-color: pink;
+}
+
+#item2{
+    background-color: brown;
+    color: white;
+}
+
+#item3{
+    background-color: yellow;
+}
+
+@media (min-width: 1300px) {
+    .col-lg-4{
+        float: left;
+        width: 31%;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1299px) {
+    .col-md-6{
+        float: left;
+        width: 44%;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1299px) {
+    .col-md-1{
+        float: left;
+        width: 91%;
+    }
 }
